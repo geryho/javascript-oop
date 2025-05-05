@@ -5,5 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Constructor Inheritance</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      function Employees(firstName) {
+        this.firstName = firstName;
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, My name is ${this.firstName}`);
+        };
+      }
+
+      function Manager(firstName, lastName) {
+        this.lastName = lastName;
+        Employees.call(this, firstName);
+      }
+
+      const eko = new Manager("Eko", "Kurniawan");
+      eko.sayHello("Gery");
+      console.info(eko);
+    </script>
+  </body>
 </html>
