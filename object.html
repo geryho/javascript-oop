@@ -7,10 +7,10 @@
   </head>
   <body>
     <script>
-      //constructor function
-      function Person() {
-        this.firstName = "";
-        this.lastName = "";
+      //constructor function with parameters
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
 
         //method in constructor
         this.sayHello = function (name) {
@@ -19,12 +19,10 @@
       }
 
       //object
-      const eko = new Person();
-      eko.firstName = "Eko";
+      const eko = new Person("Eko", "Gunawan");
       eko.sayHello("Gery");
 
-      const budi = new Person();
-      budi.firstName = "Budi";
+      const budi = new Person("Gery", "Ho");
       budi.sayHello("Eko");
 
       console.info(eko);
