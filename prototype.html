@@ -15,10 +15,21 @@
           console.info(`Hello ${name}, my name is ${this.firstName}`);
         };
       }
+
+      Person.prototype.sayBye = function () {
+        console.info("Good Bye");
+      };
+
+      Person.prototype.run = function (firstName) {
+        console.info(`${this.firstName} is running`);
+      };
       //object const eko = new Person("Eko", "Gunawan"); eko.sayHello("Gery");
       const angel = new Person("Angel", "Intan");
       const gery = new Person("Gery", "Ho");
+
       console.info(angel);
+      angel.sayBye();
+      angel.run();
       console.info(gery);
     </script>
   </body>
