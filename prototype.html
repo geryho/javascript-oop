@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        //method in constructor
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName}`);
+        };
+      }
+      //object const eko = new Person("Eko", "Gunawan"); eko.sayHello("Gery");
+      const angel = new Person("Angel", "Intan");
+      const gery = new Person("Gery", "Ho");
+      console.info(angel);
+      console.info(gery);
+    </script>
+  </body>
+</html>
