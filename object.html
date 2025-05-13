@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prototype</title>
+    <title>Object</title>
   </head>
   <body>
     <script>
@@ -18,24 +18,15 @@
         };
       }
 
-      //adding method to constructor prototype
-      Person.prototype.sayBye = function () {
-        console.info("Good Bye");
-      };
-
-      Person.prototype.run = function () {
-        console.info(`${this.firstName} is running`);
-      };
-
       //object
       const eko = new Person("Eko", "Gunawan");
+      eko.sayHello("Gery");
 
       const budi = new Person("Gery", "Ho");
+      budi.sayHello("Eko");
 
       console.info(eko);
-      eko.sayBye();
-      budi.run();
-      console.info(budi.firstName);
+      console.info(budi);
     </script>
   </body>
 </html>
